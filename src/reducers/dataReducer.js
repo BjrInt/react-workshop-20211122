@@ -58,10 +58,14 @@ const dataReducer = createSlice({
 
     setSelectedProvince: (state, {payload}) => {
       state.selectedProvince = payload
-    }
+    },
+
+    setOffsetFromGraph(state, {payload}){
+      state.offset = state.hospByDate.findIndex(x => x.DATE === payload)
+    },
   },
 })
 
-export const { setOffset, setSelectedProvince } = dataReducer.actions
+export const { setOffset, setSelectedProvince, setOffsetFromGraph } = dataReducer.actions
 
 export default dataReducer.reducer
