@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { setSelectedProvince } from '../../reducers/dataReducer'
 import './Belgium.scss'
 
 const provinces = [
@@ -54,6 +55,7 @@ const fillipe = (nb, max) => {
 }
 
 const Belgium = () => {
+  const dispatch = useDispatch()
   const maxIn = useSelector(state => state.data.maxIn)
   const toDisplay = useSelector(state => state.data.hospByDate[state.data.offset])
 
@@ -63,7 +65,8 @@ const Belgium = () => {
     {
       provinces.map(province => (
         <path id={province.name} 
-              d={province.coord} 
+              d={province.coord}
+              onClick={() => dispatch(setSelectedProvince(province.name))}
               fill={
                 fillipe(toDisplay.hosp.find(x => x.PROVINCE === province.name).TOTAL_IN, maxIn)
               } 

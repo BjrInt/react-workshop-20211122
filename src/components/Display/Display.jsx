@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux"
 
 const Display = () => {
-  const offset = useSelector(state => state.data.offset)
   const toDisplay = useSelector(state => state.data.hospByDate[state.data.offset])
 
   return (
