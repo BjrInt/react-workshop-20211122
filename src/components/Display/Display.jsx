@@ -6,11 +6,11 @@ const Display = () => {
 
   return (
     <div>
-      <h1>Case affichée {offset}</h1>
+      <h1>{new Date(toDisplay.DATE).toLocaleDateString()}</h1>
 
-      <div>
-        {JSON.stringify(toDisplay)}
-      </div>
+      <h2>
+        {toDisplay.hosp.reduce((ac, cv) => (ac += cv.TOTAL_IN), 0)} lits occupés
+      </h2>
     </div>
   )
 }

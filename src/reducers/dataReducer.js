@@ -17,9 +17,17 @@ const hospByDate = HOSPITALISATIONS.reduce((ac, cv) => {
   return ac
 }, [])
 
+const maxIn = HOSPITALISATIONS.reduce((ac, cv) => {
+  if(cv.TOTAL_IN > ac)
+    ac = cv.TOTAL_IN
+  
+  return ac
+}, 0)
+
 const initialState = {
   hospByDate,
-  offset: 0
+  offset: 0,
+  maxIn
 }
 
 const dataReducer = createSlice({
