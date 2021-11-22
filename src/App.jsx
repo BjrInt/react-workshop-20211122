@@ -1,5 +1,13 @@
 import './main.scss'
 
-const App = () => <h1>Hello Liège 👋</h1>
+import Display from './components/Display/Display.jsx'
+import Slider from './components/Slider/Slider.jsx'
+
+const App = () => (
+  <>
+    <Display />
+    <Slider />
+  </>
+)
 
 export default App
