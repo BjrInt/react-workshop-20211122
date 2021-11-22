@@ -7,12 +7,15 @@ import Graph from './components/Graph/Graph.jsx'
 
 
 const App = () => (
-  <>
-    <Display />
+  <main>
+    <section style={{ display: 'flex' }}>
+      <Belgium />
+      <Display />
+    </section>
+
     <Slider />
-    <Belgium />
     <Graph />
-  </>
+  </main>
 )
 
 export default App

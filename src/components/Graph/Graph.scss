@@ -1,5 +1,28 @@
-circle:hover{
-  r: 7px;
-  transition: .3s;
+circle{
+  transition: .5s;
   cursor: pointer;
+
+  &:hover{
+    r: 7px;
+  }
+}
+
+path{
+  cursor: pointer;
+  transition: .5s;
+
+  &:hover{
+    fill: #000;
+  }
+}
+
+polyline{
+  transition: .5s;
+}
+
+rect{
+  pointer-events: none;
+  height: 300px;
+  width: 2px;
+  fill: green;
 }

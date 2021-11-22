@@ -7,6 +7,7 @@ const Graph = () => {
   const selectedProvince = useSelector(state => state.data.selectedProvince)
   const maxIn = useSelector(state => state.data.maxIn)
   const hospByProvince = useSelector(state => state.data.hospByProvince)
+  const selectedDate = useSelector(state => state.data.hospByDate[state.data.offset]).DATE
 
   if(selectedProvince !== null) {
     const _province = hospByProvince.find(x => x.PROVINCE === selectedProvince).hosp
@@ -39,6 +40,7 @@ const Graph = () => {
                       onClick={() => dispatch(setOffsetFromGraph(d))} />
             ))
           }
+          <rect x={(new Date(selectedDate).getTime() - new Date(_province[0].DATE).getTime()) / dT * 1200} />
         </svg>
       </div>
     )

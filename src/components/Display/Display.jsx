@@ -5,7 +5,7 @@ const Display = () => {
 
   return (
     <div>
-      <h1>{new Date(toDisplay.DATE).toLocaleDateString()}</h1>
+      <h1>{new Date(toDisplay.DATE).toDateString()}</h1>
 
       <h2>
         {toDisplay.hosp.reduce((ac, cv) => (ac += cv.TOTAL_IN), 0)} lits occupés

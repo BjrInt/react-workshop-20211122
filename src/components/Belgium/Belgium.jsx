@@ -61,7 +61,7 @@ const Belgium = () => {
 
   console.log()
   return (
-  <svg baseProfile="tiny" height={817} stroke="#ffffff" strokeWidth={2} version="1.2" viewBox="0 0 1000 817" width={1000} xmlns="http://www.w3.org/2000/svg">
+  <svg baseProfile="tiny" height={408} stroke="#ffffff" strokeWidth={2} version="1.2" viewBox="0 0 1000 817" width={500} xmlns="http://www.w3.org/2000/svg">
     {
       provinces.map(province => (
         <path id={province.name} 
