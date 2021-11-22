@@ -15,3 +15,5 @@ Need inspiration on what to do next? Here are some ideas
 - Create `<circle>` on the `<Graph />` component for each datapoint
 - Add an onClick event on each `<circle>` to modify the application state
 - Create a calendar component to manually select a date
+- Use async actions to fetch the data on the website rather than dowloading a copy
+- Use intervals to add a "Play" button to automatically slide the data.
