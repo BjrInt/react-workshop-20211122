@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body{width:90%;max-width:1200px;margin:auto;font-family:sans-serif;color:#ddd;background-color:#222}#slider{width:100%}path{transition:.3s}circle{transition:.5s;cursor:pointer}circle:hover{r:7px}path{cursor:pointer;transition:.5s}path:hover{fill:#000}polyline{transition:.5s}rect{pointer-events:none;height:300px;width:2px;fill:green}#legend{position:absolute;font-size:14px}#legend .txt{display:inline-block;padding:15px;background:#222}
+/*# sourceMappingURL=main.af6117f5.chunk.css.map */
