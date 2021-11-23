@@ -46,26 +46,43 @@ const initialState = {
   offset: 0,
   maxIn,
   selectedProvince: null,
+  mousePosition: { x: null, y: null },
+  hoveredProvince: null
 }
 
 const dataReducer = createSlice({
   name: 'data',
   initialState,
   reducers: {
-    setOffset: (state, {payload}) => {
+    setOffset: (state, { payload }) => {
       state.offset = parseInt(payload)
     },
 
-    setSelectedProvince: (state, {payload}) => {
+    setSelectedProvince: (state, { payload }) => {
       state.selectedProvince = payload
     },
 
-    setOffsetFromGraph(state, {payload}){
+    setOffsetFromGraph(state, { payload }){
       state.offset = state.hospByDate.findIndex(x => x.DATE === payload)
     },
+
+    setHoveredProvince(state, {payload: [x, y, p]} ){
+      state.hoveredProvince = p
+      state.mousePosition = {x, y}
+    },
+
+    unsetMousePosition: (state) => {
+      state.mousePosition = { x: null, y: null }
+    }
   },
 })
 
-export const { setOffset, setSelectedProvince, setOffsetFromGraph } = dataReducer.actions
+export const { 
+  setOffset, 
+  setSelectedProvince, 
+  setOffsetFromGraph, 
+  setHoveredProvince,
+  unsetMousePosition
+} = dataReducer.actions
 
 export default dataReducer.reducer
